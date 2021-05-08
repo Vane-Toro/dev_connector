@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://vane123:vane123@devconnector.oglzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://vane123:vane123@devconnector.oglzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "vaneSecret"
 }
