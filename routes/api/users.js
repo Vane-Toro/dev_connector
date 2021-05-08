@@ -18,13 +18,12 @@ router.post('/',
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
-
     }
     const { name, email, password } = req.body
     try {
       let user = await User.findOne({ email })
       if (user) {
-        res.status(400).json({ errors: [{ msg: "User already exists" }] })
+        return res.status(400).json({ errors: [{ msg: "User already exists" }] })
       }
 
       const avatar = gravatar.url(email, {
